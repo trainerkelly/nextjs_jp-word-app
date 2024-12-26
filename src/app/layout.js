@@ -12,49 +12,45 @@ export default function RootLayout({ children }) {
       <body>
         <header>
           <h1>TrainerKelly's Japanese Learning Session</h1>
-          <nav class="section-nav">
-            <button
-              id="home-btn"
-              className="section-links"
-              onclick="openSection(event, 'home-tab')"
-            >
+          <nav className="section-nav">
+            <Link id="home-btn" className="section-links nav-link" href="/">
               Home
-            </button>
-            <button
+            </Link>
+            <Link
               id="about-btn"
-              className="section-links"
-              onclick="openSection(event, 'about-tab')"
+              className="section-links nav-link"
+              href="/about"
             >
               About
-            </button>
-            <button
+            </Link>
+            <Link
               id="settings-btn"
-              className="section-links"
-              onclick="openSection(event, 'settings-tab')"
+              className="section-links nav-link"
+              href="/settings"
             >
               Word List &amp; Settings
-            </button>
-            <button
+            </Link>
+            <Link
               id="word-selection-btn"
-              className="section-links"
-              onclick="openSection(event, 'word-selection-tab')"
+              className="section-links nav-link"
+              href="/selection"
             >
               Word Selection
-            </button>
-            <button
+            </Link>
+            <Link
               id="learn-btn"
-              className="section-links"
-              onclick="openSection(event, 'learn-tab')"
+              className="section-links nav-link"
+              href="/learn"
             >
               Learn
-            </button>
-            <button
+            </Link>
+            <Link
               id="credits-btn"
-              className="section-links"
-              onclick="openSection(event, 'credits-tab')"
+              className="section-links nav-link"
+              href="/credits"
             >
               Credits
-            </button>
+            </Link>
           </nav>
         </header>
         <main>{children}</main>

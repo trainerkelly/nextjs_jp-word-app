@@ -449,7 +449,7 @@ footer {
   z-index: 99;
 }
 
-.section-nav button {
+.section-nav .nav-link {
   background-color: inherit;
   color: #ffffff;
   font-weight: bold;
@@ -458,13 +458,14 @@ footer {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  align-content: center;
 }
 
-.section-nav button:hover {
+.section-nav .nav-link:hover {
   background-color: #eb5353;
 }
 
-.section-nav button.active {
+.section-nav .nav-link.active {
   background-color: #830000;
 }
 
@@ -1014,7 +1015,7 @@ label > .en-meaning {
     border-top-left-radius: 10px;
   }
 
-  .section-nav button {
+  .section-nav .nav-link {
     margin-right: 20px;
   }
 
