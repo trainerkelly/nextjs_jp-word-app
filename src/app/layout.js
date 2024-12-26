@@ -1,15 +1,5 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from "next/link";
 
 export const metadata = {
   title: "Create Next App",
@@ -19,8 +9,64 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+        <header>
+          <h1>TrainerKelly's Japanese Learning Session</h1>
+          <nav class="section-nav">
+            <button
+              id="home-btn"
+              className="section-links"
+              onclick="openSection(event, 'home-tab')"
+            >
+              Home
+            </button>
+            <button
+              id="about-btn"
+              className="section-links"
+              onclick="openSection(event, 'about-tab')"
+            >
+              About
+            </button>
+            <button
+              id="settings-btn"
+              className="section-links"
+              onclick="openSection(event, 'settings-tab')"
+            >
+              Word List &amp; Settings
+            </button>
+            <button
+              id="word-selection-btn"
+              className="section-links"
+              onclick="openSection(event, 'word-selection-tab')"
+            >
+              Word Selection
+            </button>
+            <button
+              id="learn-btn"
+              className="section-links"
+              onclick="openSection(event, 'learn-tab')"
+            >
+              Learn
+            </button>
+            <button
+              id="credits-btn"
+              className="section-links"
+              onclick="openSection(event, 'credits-tab')"
+            >
+              Credits
+            </button>
+          </nav>
+        </header>
+        <main>{children}</main>
+        <footer>
+          <p>
+            Site created by{" "}
+            <Link href="https://www.kellymulry.com" target="_blank">
+              Kelly Mulry
+            </Link>
+            . For personal use.
+          </p>
+        </footer>
       </body>
     </html>
   );
